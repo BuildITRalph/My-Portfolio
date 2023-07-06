@@ -1,0 +1,263 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+@import url(https://fonts.googleapis.com/css?family=Abel:regular);
+
+/* colors: 
+rgb(242, 216, 216) light
+rgb(92, 137, 132)   to
+rgb(84, 91, 119)   dark
+rgb(55, 66, 89)
+
+*/
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 15vh;
+    justify-content: space-between;
+    background-color: rgb(55, 66, 89);
+    align-items: center;
+    margin: 0;
+    z-index: 10;
+    position: fixed;
+
+}
+
+#logo {
+    font-family: montserrat;
+    margin-left: 2rem;
+    color: rgb(242, 216, 216);
+}
+
+nav {
+
+    display: flex;
+    width: 30%;
+    margin-right: 4em;
+    flex-wrap: wrap;
+
+}
+
+#nav-links {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding: 0;
+
+}
+
+#nav-links>li {
+    font-family: montserrat;
+    font-size: 1.5rem;
+    list-style: none;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    text-align: justify;
+
+}
+
+a {
+    color: rgb(242, 216, 216);
+    text-decoration: none;
+}
+
+#nav-links>li:hover {
+    animation: shrink 1s ease 0s 1 normal forwards;
+}
+
+
+#about-me {
+    display: flex;
+    width: 100%;
+    height: 130vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(0deg, rgb(55, 66, 89), rgb(242, 216, 216));
+}
+
+#about-me p {
+    font-family: montserrat;
+    font-weight: 700;
+    font-size: 3rem;
+    color: rgb(55, 66, 89);
+    text-shadow: 3px 3px 3px #000000;
+
+}
+
+#project {
+    padding: 8% 1.5rem 0 1.5rem;
+    font-family: montserrat;
+    font-weight: 700;
+    font-size: 3rem;
+    background-color: rgb(55, 66, 89);
+
+
+}
+
+#contact {
+
+    display: grid;
+    grid-template-rows: 4fr 5rem;
+    height: 100vh;
+    font-family: montserrat;
+    font-weight: 700;
+    font-size: 3rem;
+    background-image: linear-gradient(180deg, rgb(55, 66, 89), rgb(242, 216, 216));
+
+}
+
+
+
+.description {
+    font-size: 4rem;
+    color: rgb(242, 216, 216);
+}
+
+#about-me .me-text {
+    animation: jello 1s ease 1.25s 1 normal backwards;
+}
+
+.project-file img {
+    display: inline;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 9px 8px 14px 1px #000000;
+}
+
+.project-file img:hover {
+    animation: emphasis 800ms ease 0s 1 normal forwards;
+    cursor: pointer;
+}
+
+.project-file {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 1.5rem;
+}
+
+#project>p {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: rgb(242, 216, 216);
+    text-shadow: 3px 3px 3px #000000;
+
+}
+
+.contact-icon {
+    width: 1em;
+    height: 1em;
+    justify-self: self-end;
+    align-self: center;
+
+}
+
+#contact-bar {
+    display: grid;
+    width: 100%;
+    height: 5rem;
+    gap: 10px;
+    grid-template-columns: repeat(6, 1fr);
+    background-color: rgb(55, 66, 89);
+}
+
+.link-text {
+    font-size: 1rem;
+    align-self: center;
+    color: rgb(242, 216, 216);
+
+}
+
+#contact p {
+    align-self: self-end;
+    padding-left: 4em;
+    padding-bottom: 10px;
+    color: rgb(55, 66, 89);
+}
+
+
+
+
+
+
+/* animations */
+@keyframes jello {
+    0% {
+        transform: scale3d(1, 1, 1);
+    }
+
+    30% {
+        transform: scale3d(0.75, 1.25, 1);
+    }
+
+    40% {
+        transform: scale3d(1.25, 0.75, 1);
+    }
+
+    50% {
+        transform: scale3d(0.85, 1.15, 1);
+    }
+
+    65% {
+        transform: scale3d(1.05, 0.95, 1);
+    }
+
+    75% {
+        transform: scale3d(0.95, 1.05, 1);
+    }
+
+    100% {
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+@keyframes emphasis {
+
+    0%,
+    100% {
+        transform: translateX(0%);
+        transform-origin: 50% 50%;
+    }
+
+    15% {
+        transform: translateX(-30px) rotate(-6deg);
+    }
+
+    30% {
+        transform: translateX(15px) rotate(6deg);
+    }
+
+    45% {
+        transform: translateX(-15px) rotate(-3.6deg);
+    }
+
+    60% {
+        transform: translateX(9px) rotate(2.4deg);
+    }
+
+    75% {
+        transform: translateX(-6px) rotate(-1.2deg);
+    }
+}
+
+@keyframes shrink {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(0.8);
+    }
+}
